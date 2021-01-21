@@ -1,0 +1,50 @@
+.widget-root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 1rem !important;
+    height: 150px;
+    width: 150px;
+    transition: all 0.3s !important;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse !important;
+}
+
+.widget-expand, .widget-root:hover {
+    width: 400px;
+}
+
+.widget-root:hover > .widget-text, .widget-expand > .widget-text {
+    animation: showText 0.5s ease;
+    animation-fill-mode: forwards;
+}
+
+.widget-image {
+    height: 100%;
+    width: auto;
+    border-radius: 1rem;
+}
+
+.widget-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+}
+
+@keyframes showText {
+    0% {
+        visibility: hidden;
+    }
+    55% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
