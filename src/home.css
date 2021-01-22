@@ -1,81 +1,46 @@
 div#home-container {
     width: 100%;
     height: 100%;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; */
 }
 
-.widget-layer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-}
-
-.first-widget {
+.top-left-widget, .bottom-widget {
     position: absolute;
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
 }
 
-.second-widget {
+.top-right-widget {
     position: absolute;
     top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.loading-widget {
+    position: absolute;
+    width: 80%;
+    height: 100px;
+    top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
-}
-
-
-
-
-
-
-div#top {
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-
-    /* Starting Value for Animation */
-    opacity: 0;
-}
-
-
-div#second-widget {
-    display: none !important;
-
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 1rem !important;
 }
 
 
-div#third-row {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding-bottom: 24px;
-    padding-left: 12px;
-    padding-right: 12px;
-}
-
-
-
-
-/*** INITIALIZATION ANIMATIONS ***/
+/*** ANIMATIONS ***/
 .fade-in {
     animation: fadeIn 0.3s ease forwards;
+}
+
+.fade-in-slow {
+    animation: fadeIn 1s ease forwards;
 }
 
 .move-profile-widget {
@@ -84,6 +49,22 @@ div#third-row {
 
 .move-location-widget {
     animation: moveLocationWidget 0.75s ease forwards;
+}
+
+.move-export-resume-widget {
+    animation: moveExportResumeWidget 0.5s ease forwards;
+}
+
+.move-linked-in-widget {
+    animation: moveLinkedInWidget 0.5s ease forwards;
+}
+
+.move-git-hub-widget {
+    animation: moveGitHubWidget 0.5s ease forwards;
+}
+
+.move-contact-me-widget {
+    animation: moveContactMeWidget 0.5s ease forwards;
 }
 
 @keyframes fadeIn {
@@ -117,5 +98,33 @@ div#third-row {
         top: 12px;
         right: 12px;
         transform: translate(0, 0);
+    }
+}
+
+@keyframes moveExportResumeWidget {
+    100% {
+        top: 87%;
+        left: 15%;
+    }
+}
+
+@keyframes moveLinkedInWidget {
+    100% {
+        top: 87%;
+        left: 35%;
+    }
+}
+
+@keyframes moveGitHubWidget {
+    100% {
+        top: 87%;
+        left: 65%;
+    }
+}
+
+@keyframes moveContactMeWidget {
+    100% {
+        top: 87%;
+        left: 85%;
     }
 }

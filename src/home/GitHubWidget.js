@@ -1,21 +1,15 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-
-const useStyles = makeStyles({
-    root: {
-        width: "75px",
-        height: "75px",
-        borderRadius: "50%",
-        backgroundColor: "green"
-    }
-});
+import Tooltip from "@material-ui/core/Tooltip";
+import Fab from "@material-ui/core/Fab";
+import GitHubIcon from '@material-ui/icons/GitHub';
+import "./styles.css";
 
 
 export default function GitHubWidget(props) {
-    const classes = useStyles();
-
     return (
-        <div className={classes.root}>
-        </div>
+        <Tooltip title="GitHub" placement="right">
+            <Fab className={`fab`} aria-label="GitHub">
+                <GitHubIcon />
+            </Fab>
+        </Tooltip>
     )
 }
