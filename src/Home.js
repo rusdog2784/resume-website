@@ -63,6 +63,8 @@ class Home extends Component {
             await this.startProfileWidgetAnimation();
             await wait(100);
             await this.startLocationWidgetAnimation();
+            await wait(500);
+            await this.expandWidgets();
             await wait(100);
             await this.startExportResumeWidgetAnimation();
             await wait(100);
@@ -71,10 +73,12 @@ class Home extends Component {
             await this.startGitHubWidgetAnimation();
             await wait(100);
             await this.startContactMeWidgetAnimation();
-            await wait(1000);
-            await this.expandWidgets();
-            await wait(1750);
+            // await wait(1000);
+            // await this.expandWidgets();
+            await wait(1500);
             await this.showNavigationArrows();
+            await wait(100);
+            await this.collapseWidgets();
         } else {
             this.showAllWidgets();
         }
@@ -125,7 +129,10 @@ class Home extends Component {
             expandProfileWidget: true,
             expandLocationWidget: true
         });
-        await wait(1500);
+    }
+
+    collapseWidgets = async() => {
+        await wait(250);
         this.setState({
             expandProfileWidget: false,
             expandLocationWidget: false
