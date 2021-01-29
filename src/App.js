@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Home from "./Home";
-import Slides from "./Slides";
+import Grid from "./testing_stuff/Grid";
 
 
 class App extends Component {
     render() {
         return (
             <div id="app-container">
-                <Slides />
+                <Grid />
             </div>
         )
     }

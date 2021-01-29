@@ -6,7 +6,7 @@ html, body {
 div#root, div#app-container {
     height: 100%;
     background-image: url("./assets/img/background2.jpg");
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 div#app-container {
@@ -15,7 +15,7 @@ div#app-container {
     align-items: center;
 }
 
-div.glass {
+.glass {
     width: 90vw;
     height: 90vh;
     margin: 0 auto;

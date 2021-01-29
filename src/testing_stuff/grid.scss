@@ -1,0 +1,96 @@
+// ****************
+// Constants
+// ****************
+
+:root {
+    --views-width: 90vw;
+    --views-height: 90vh;
+    
+    --horizontal-flex-multiplier: 3;
+    --vertical-flex-multiplier: 2.05;
+} 
+
+.glass-effect {
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+    backdrop-filter: blur(0.5rem);
+}
+
+
+// ****************
+// Grid
+// ****************
+
+.grid-root {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.views-wrapper {
+    position: absolute;
+    top: 0px;
+
+    width: calc(var(--views-width) * var(--horizontal-flex-multiplier));
+    height: calc(var(--views-height) * var(--vertical-flex-multiplier));
+    margin-top: 24px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
+
+    transition: transform var(--base-duration) cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+
+// ****************
+// Views
+// ****************
+
+.view {
+    width: var(--views-width);
+    height: var(--views-height);
+
+    &--left,
+    &--right,
+    &--top,
+    &--bottom {
+        transform-style: preserve-3d;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &--left {
+        cursor: w-resize;
+        transform: perspective(1000px) translateX(1%) rotateY(5deg);
+    }
+
+    &--right {
+        cursor: e-resize;
+        transform: perspective(1000px) translateX(-1%) rotateY(-5deg);
+    }
+
+    &--top {
+        cursor: n-resize;
+        transform: perspective(1000px) translateY(3%) rotateX(-5deg);
+    }
+
+    &--bottom {
+        cursor: s-resize;
+        transform: perspective(1000px) translateY(-3%) rotateX(5deg);
+    }
+}

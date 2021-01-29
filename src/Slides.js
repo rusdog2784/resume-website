@@ -19,36 +19,71 @@ class Slides extends Component {
         super(props)
 
         this.state = { 
-            current: 1,
+            current: 0,
             slides: [
                 {
-                    index: 0,
+                    index: -1,
                     title: "Hobbies and Interests",
-                    headline: 'New Fashion Apparel',
-                    button: 'Shop now',
-                    src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg'
+                    point: {
+                        x: -1,
+                        y: 0
+                    }
+                },
+                {
+                    index: 0,
+                    title: "Home"
+                    ,
+                    point: {
+                        x: 0,
+                        y: 0
+                    }
                 },
                 {
                     index: 1,
-                    title: "Home",
-                    headline: 'In The Wilderness',
-                    button: 'Book travel',
-                    src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/forest.jpg'
-                },
-                {
-                    index: 2,
                     title: "Work Experience",
-                    headline: 'For Your Current Mood',
-                    button: 'Listen',
-                    src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/guitar.jpg'
+                    point: {
+                        x: 1,
+                        y: 0
+                    }
+                },
+                // {
+                //     index: 2,
+                //     title: "Skills",
+                //     point: {
+                //         x: 0,
+                //         y: -1
+                //     }
+                // }
+            ],
+            topSlides: [
+                {
+                    index: -1,
+                    title: "Hobbies and Interests",
+                    point: {
+                        x: -1,
+                        y: 0
+                    }
                 },
                 {
-                    index: 3,
-                    title: "Skills",
-                    headline: 'Focus On The Writing',
-                    button: 'Get Focused',
-                    src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/typewriter.jpg'
+                    index: 0,
+                    title: "Home"
+                    ,
+                    point: {
+                        x: 0,
+                        y: 0
+                    }
+                },
+                {
+                    index: 1,
+                    title: "Work Experience",
+                    point: {
+                        x: 1,
+                        y: 0
+                    }
                 }
+            ],
+            bottomSlides: [
+                
             ]
         };
         this.handlePreviousClick = this.handlePreviousClick.bind(this);
@@ -59,16 +94,16 @@ class Slides extends Component {
     handlePreviousClick() {
         const previous = this.state.current - 1
 
-        this.setState({ 
-            current: (previous < 0) ? this.state.slides.length - 1 : previous
+        this.setState({
+            current: previous
         })
     }
 
     handleNextClick() {
         const next = this.state.current + 1;
 
-        this.setState({ 
-            current: (next === this.state.slides.length) ? 0 : next
+        this.setState({
+            current: next
         })
     }
 
@@ -83,8 +118,24 @@ class Slides extends Component {
     render() {
         const { current, slides } = this.state;
         
+        var x = 0;
+        var y = 0;
+        slides.map(slide => {
+            if (current === slide.index) {
+                x = slide.point.x;
+                y = slide.point.y;
+            }
+        });
+
+        
+        // const translateX = (current * (100 / 3) * -1);
+
+
+        const translateX = (current * (100 / 3) * -1);
+        // console.log("Current: " + current);
+        // console.log("translateX: " + translateX);
         const wrapperTransform = {
-            'transform': `translateX(-${current * (100 / slides.length)}%)`
+            'transform': `translateX(${translateX}%)`
         }
 
         return (
@@ -104,7 +155,7 @@ class Slides extends Component {
 
                 </ul>
 
-                <div className="slider__controls">
+                {/* <div className="slider__controls">
                     <SliderControl 
                         type="previous"
                         title="Go to previous slide"
@@ -116,7 +167,7 @@ class Slides extends Component {
                         title="Go to next slide"
                         handleClick={this.handleNextClick}
                     />
-                </div>
+                </div> */}
             </div>
         )
     }

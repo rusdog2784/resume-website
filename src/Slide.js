@@ -20,7 +20,6 @@ class Slide extends Component {
 
     render() {
         const { index, title } = this.props.slide;
-        // const { index, src, button, headline } = this.props.slide;
         const current = this.props.current;
         let classNames = "slide";
 
