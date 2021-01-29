@@ -232,7 +232,7 @@ class Home extends Component {
 
                     {showLoadingWidget &&
                         <Paper elevation={3} className={`loading-widget`}>
-                            <Typography variant="h4">Initializing...</Typography>
+                            <Typography variant="h4">Loading...</Typography>
                             <Loading start={this.startInitialAnimationSequence}/>
                         </Paper>
                     }

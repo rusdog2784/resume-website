@@ -3,12 +3,13 @@ html, body {
     margin: 0;
 }
 
-div#root, div#main-container {
+div#root, div#app-container {
     height: 100%;
     background-image: url("./assets/img/background2.jpg");
+    /* overflow: hidden; */
 }
 
-div#main-container {
+div#app-container {
     display: flex;
     justify-content: center;
     align-items: center;
