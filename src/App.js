@@ -7,6 +7,7 @@ class App extends Component {
     render() {
         return (
             <div id="app-container">
+                <div className={`background-img`}></div>
                 <Grid />
             </div>
         )

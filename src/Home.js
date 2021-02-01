@@ -224,55 +224,53 @@ class Home extends Component {
         } = this.state;
 
         return (
-            <div className="glass">
-                <div id="home-container">
-                    {showNavigationArrows &&
-                        <NavigationArrows animation={navigationArrowsAnimation}/>
-                    }
+            <div id="home-container">
+                {showNavigationArrows &&
+                    <NavigationArrows animation={navigationArrowsAnimation}/>
+                }
 
-                    {showLoadingWidget &&
-                        <Paper elevation={3} className={`loading-widget`}>
-                            <Typography variant="h4">Loading...</Typography>
-                            <Loading start={this.startInitialAnimationSequence}/>
-                        </Paper>
-                    }
-                    
-                    {showProfileWidget &&
-                        <div className={`top-left-widget ${profileWidgetAnimation}`}>
-                            <ProfileWidget expand={expandProfileWidget} />
-                        </div>
-                    }
+                {showLoadingWidget &&
+                    <Paper elevation={3} className={`loading-widget`}>
+                        <Typography variant="h4">Loading...</Typography>
+                        <Loading start={this.startInitialAnimationSequence}/>
+                    </Paper>
+                }
+                
+                {showProfileWidget &&
+                    <div className={`top-left-widget ${profileWidgetAnimation}`}>
+                        <ProfileWidget expand={expandProfileWidget} />
+                    </div>
+                }
 
-                    {showLocationWidget && 
-                        <div className={`top-right-widget ${locationWidgetAnimation}`}>
-                            <LocationWidget expand={expandLocationWidget} />
-                        </div>
-                    }
+                {showLocationWidget && 
+                    <div className={`top-right-widget ${locationWidgetAnimation}`}>
+                        <LocationWidget expand={expandLocationWidget} />
+                    </div>
+                }
 
-                    {showExportResumeWidget &&
-                        <div className={`bottom-widget ${exportResumeWidgetAnimation}`}>
-                            <ExportResumeWidget />
-                        </div>
-                    }
+                {showExportResumeWidget &&
+                    <div className={`bottom-widget ${exportResumeWidgetAnimation}`}>
+                        <ExportResumeWidget />
+                    </div>
+                }
 
-                    {showLinkedInWidget &&
-                        <div className={`bottom-widget ${linkedInWidgetAnimation}`}>
-                            <LinkedInWidget />
-                        </div>
-                    }
+                {showLinkedInWidget &&
+                    <div className={`bottom-widget ${linkedInWidgetAnimation}`}>
+                        <LinkedInWidget />
+                    </div>
+                }
 
-                    {showGitHubWidget &&
-                        <div className={`bottom-widget ${gitHubWidgetAnimation}`}>
-                            <GitHubWidget />
-                        </div>
-                    }
+                {showGitHubWidget &&
+                    <div className={`bottom-widget ${gitHubWidgetAnimation}`}>
+                        <GitHubWidget />
+                    </div>
+                }
 
-                    {showContactMeWidget &&
-                        <div className={`bottom-widget ${contactMeWidgetAnimation}`}>
-                            <ContactMeWidget />
-                        </div>
-                    }
-                </div>
+                {showContactMeWidget &&
+                    <div className={`bottom-widget ${contactMeWidgetAnimation}`}>
+                        <ContactMeWidget />
+                    </div>
+                }
             </div>
         )
     }

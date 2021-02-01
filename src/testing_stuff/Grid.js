@@ -43,6 +43,14 @@ class Grid extends Component {
                 },
             ]
         }
+
+        this.handleViewClick = this.handleViewClick.bind(this);
+    }
+
+    handleViewClick(position) {
+        if (this.state.currentPosition.x !== position.x || this.state.currentPosition.y !== position.y) {
+            this.setState({ currentPosition: position });
+        }
     }
 
     render() {
@@ -62,6 +70,7 @@ class Grid extends Component {
                             title={view.title} 
                             position={view.position}
                             currentPosition={currentPosition}
+                            handleViewClick={this.handleViewClick}
                         />
                     })}
                 </div>
