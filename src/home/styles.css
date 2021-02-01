@@ -28,6 +28,10 @@
     border-radius: 1rem;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .widget-text {
     flex: 1;
     display: flex;
@@ -40,6 +44,11 @@
 .fab {
     width: 4.5rem !important;
     height: 4.5rem !important;
+    background-color: white !important;
+}
+
+.fab:hover {
+    background-color: #d5d5d5 !important;
 }
 
 .fab svg {
@@ -72,6 +81,7 @@
     background-color: rgba(255, 255, 255, 0.3) !important;
     border-radius: 4px !important;
     width: 36px !important;
+    background-color: white !important;
 }
 
 .navigate-button:hover {
@@ -92,6 +102,14 @@
 
 .navigate-down {
     bottom: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 56px !important;
+    height: 20px !important;
+}
+
+.navigate-up {
+    top: 12px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 56px !important;

@@ -9,9 +9,14 @@
     --horizontal-flex-multiplier: 3;
     --vertical-flex-multiplier: 2.05;
 
-    --base-duration: 1250ms;
+    --base-duration: 700ms;
     --base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
 } 
+
+
+// ****************
+// Global
+// ****************
 
 .glass-effect {
     background: linear-gradient(
@@ -123,6 +128,10 @@
     animation-delay: calc(var(--base-duration) / 6);
 }
 
+
+// ****************
+// Animations
+// **************** 
 
 @keyframes view-out-left {
     0% {

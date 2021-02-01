@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import Tooltip from "@material-ui/core/Tooltip";
 import Fab from "@material-ui/core/Fab";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -6,27 +7,83 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 
-export default function NavigationArrows(props) {
-    const animation = props.animation;
-    return (
-        <div className={`navigation-arrows-root ${animation}`}>
-            <Tooltip title="Navigate Left" placement="right">
-                <Fab className={`navigate-button navigate-left`} aria-label="Navigate Left">
-                    <NavigateBeforeIcon />
-                </Fab>
-            </Tooltip>
-
-            <Tooltip title="Navigate Right" placement="left">
-                <Fab className={`navigate-button navigate-right`} aria-label="Navigate Right">
-                    <NavigateNextIcon />
-                </Fab>
-            </Tooltip>
-
-            <Tooltip title="Navigate Down" placement="top">
-                <Fab className={`navigate-button navigate-down`} aria-label="Navigate Down">
-                    <ExpandMoreIcon />
-                </Fab>
-            </Tooltip>
-        </div>
-    )
+export const NavigationDirection = {
+    right: "RIGHT",
+    left: "LEFT",
+    top: "TOP",
+    bottom: "BOTTOM"
 }
+
+
+class NavigationArrows extends Component {
+    constructor(props) {
+        super(props);
+
+        this.handleArrowClick = this.handleArrowClick.bind(this);
+    }
+
+    handleArrowClick(param) {
+        this.props.handleNavigationArrowClick(param);
+    }
+
+    render() {
+        const { animation, arrowsToShow } = this.props;
+
+        return (
+            <div className={`navigation-arrows-root ${animation}`}>
+
+                {arrowsToShow.includes(NavigationDirection.left) && 
+                    <Tooltip title="Navigate Left" placement="right">
+                        <Fab 
+                            className={`navigate-button navigate-left`} 
+                            onClick={() => {this.handleArrowClick(NavigationDirection.left)}} 
+                            aria-label="Navigate Left"
+                        >
+                            <NavigateBeforeIcon />
+                        </Fab>
+                    </Tooltip>
+                }
+
+                {arrowsToShow.includes(NavigationDirection.right) && 
+                    <Tooltip title="Navigate Right" placement="left">
+                        <Fab 
+                            className={`navigate-button navigate-right`} 
+                            onClick={() => {this.handleArrowClick(NavigationDirection.right)}} 
+                            aria-label="Navigate Right"
+                        >
+                            <NavigateNextIcon />
+                        </Fab>
+                    </Tooltip>
+                }
+
+                {arrowsToShow.includes(NavigationDirection.bottom) && 
+                    <Tooltip title="Navigate Down" placement="top">
+                        <Fab 
+                            className={`navigate-button navigate-down`} 
+                            onClick={() => {this.handleArrowClick(NavigationDirection.bottom)}} 
+                            aria-label="Navigate Down"
+                        >
+                            <ExpandMoreIcon />
+                        </Fab>
+                    </Tooltip>
+                }
+
+                {arrowsToShow.includes(NavigationDirection.top) &&
+                    <Tooltip title="Navigation Up" placement="bottom">
+                        <Fab 
+                            className={`navigate-button navigate-up`} 
+                            onClick={() => {this.handleArrowClick(NavigationDirection.top)}} 
+                            aria-label="Navigate Up"
+                        >
+                            <ExpandLessIcon />
+                        </Fab>
+                    </Tooltip>
+                }
+
+            </div>
+        )
+    } 
+}
+
+
+export default NavigationArrows;

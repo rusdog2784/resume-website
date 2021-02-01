@@ -9,7 +9,6 @@ import LinkedInWidget from "./home/LinkedInWidget";
 import ContactMeWidget from "./home/ContactMeWidget";
 import GitHubWidget from "./home/GitHubWidget";
 import Loading from "./home/Loading";
-import NavigationArrows from "./home/NavigationArrows";
 import "./home.css";
 
 
@@ -41,23 +40,16 @@ class Home extends Component {
             gitHubWidgetAnimation: "",
 
             showContactMeWidget: false,
-            contactMeWidgetAnimation: "",
-
-            showNavigationArrows: false,
-            navigationArrowsAnimation: ""
+            contactMeWidgetAnimation: ""
         };
     }
 
     componentDidMount() {
-        // this.startInitialAnimationSequence();
+        this.startInitialAnimationSequence();
     }
 
     startInitialAnimationSequence = async() => {
         console.log("Starting the animations...");
-        // No longer loading, so remove that component.
-        this.setState({
-            showLoadingWidget: false
-        });
         if (animate) {
             await wait(100);
             await this.startProfileWidgetAnimation();
@@ -73,11 +65,7 @@ class Home extends Component {
             await this.startGitHubWidgetAnimation();
             await wait(100);
             await this.startContactMeWidgetAnimation();
-            // await wait(1000);
-            // await this.expandWidgets();
             await wait(1500);
-            await this.showNavigationArrows();
-            await wait(100);
             await this.collapseWidgets();
         } else {
             this.showAllWidgets();
@@ -187,14 +175,6 @@ class Home extends Component {
         });
     }
 
-    showNavigationArrows = async() => {
-        await wait(100);
-        this.setState({
-            showNavigationArrows: true,
-            navigationArrowsAnimation: "fade-in-slow"
-        });
-    }
-
     render() {
         const { 
             showLoadingWidget,
@@ -217,24 +197,18 @@ class Home extends Component {
             gitHubWidgetAnimation,
 
             showContactMeWidget,
-            contactMeWidgetAnimation,
-
-            showNavigationArrows,
-            navigationArrowsAnimation
+            contactMeWidgetAnimation
         } = this.state;
 
         return (
             <div id="home-container">
-                {showNavigationArrows &&
-                    <NavigationArrows animation={navigationArrowsAnimation}/>
-                }
 
-                {showLoadingWidget &&
+                {/* {showLoadingWidget &&
                     <Paper elevation={3} className={`loading-widget`}>
                         <Typography variant="h4">Loading...</Typography>
                         <Loading start={this.startInitialAnimationSequence}/>
                     </Paper>
-                }
+                } */}
                 
                 {showProfileWidget &&
                     <div className={`top-left-widget ${profileWidgetAnimation}`}>

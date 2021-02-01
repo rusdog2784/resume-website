@@ -14,6 +14,7 @@ class Grid extends Component {
             },
             views: [
                 {
+                    index: 0,
                     title: "Hobbies",
                     position: {
                         x: -1,
@@ -21,6 +22,7 @@ class Grid extends Component {
                     }
                 },
                 {
+                    index: 1,
                     title: "Home",
                     position: {
                         x: 0,
@@ -28,6 +30,7 @@ class Grid extends Component {
                     }
                 },
                 {
+                    index: 2,
                     title: "Work Experience",
                     position: {
                         x: 1,
@@ -35,6 +38,7 @@ class Grid extends Component {
                     }
                 },
                 {
+                    index: 3,
                     title: "Skills",
                     position: {
                         x: 0,
@@ -67,10 +71,10 @@ class Grid extends Component {
                 <div className="views-wrapper" style={wrapperTransform}>
                     {views.map(view => {
                         return <View 
-                            title={view.title} 
-                            position={view.position}
+                            view={view}
                             currentPosition={currentPosition}
                             handleViewClick={this.handleViewClick}
+                            key={view.index}
                         />
                     })}
                 </div>
