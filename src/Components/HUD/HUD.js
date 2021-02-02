@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import View from "./View";
-import "./grid.scss";
+import View from "Components/HUD/View";
 
 
-class Grid extends Component {
+class HUD extends Component {
     constructor(props) {
         super(props);
 
@@ -23,7 +22,7 @@ class Grid extends Component {
                 },
                 {
                     index: 1,
-                    title: "Home",
+                    title: "About Me",
                     position: {
                         x: 0,
                         y: 0
@@ -84,4 +83,4 @@ class Grid extends Component {
 }
 
 
-export default Grid;
+export default HUD;

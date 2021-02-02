@@ -1,27 +1,21 @@
 import React, { Component } from "react";
-import Typography from "@material-ui/core/Typography";
-import Paper from "@material-ui/core/Paper";
-import ProfileWidget from "./home/ProfileWidget";
-import LocationWidget from "./home/LocationWidget";
-import DescriptionWidget from "./home/DescriptionWidget";
-import ExportResumeWidget from "./home/ExportResumeWidget";
-import LinkedInWidget from "./home/LinkedInWidget";
-import ContactMeWidget from "./home/ContactMeWidget";
-import GitHubWidget from "./home/GitHubWidget";
-import Loading from "./home/Loading";
-import "./home.css";
+import ProfileWidget from "Components/AboutMe/ProfileWidget";
+import LocationWidget from "Components/AboutMe/LocationWidget";
+import DescriptionWidget from "Components/AboutMe/DescriptionWidget";
+import ExportResumeWidget from "Components/AboutMe/ExportResumeWidget";
+import LinkedInWidget from "Components/AboutMe/LinkedInWidget";
+import ContactMeWidget from "Components/AboutMe/ContactMeWidget";
+import GitHubWidget from "Components/AboutMe/GitHubWidget";
 
 
 const animate = true;
 const wait = (delay, ...args) => new Promise(resolve => setTimeout(resolve, delay, ...args));
 
 
-class Home extends Component {
+class AboutMe extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showLoadingWidget: true,
-
             showProfileWidget: false,
             profileWidgetAnimation: "",
             expandProfileWidget: false,
@@ -51,7 +45,7 @@ class Home extends Component {
     startInitialAnimationSequence = async() => {
         console.log("Starting the animations...");
         if (animate) {
-            await wait(100);
+            await wait(1000);
             await this.startProfileWidgetAnimation();
             await wait(100);
             await this.startLocationWidgetAnimation();
@@ -177,8 +171,6 @@ class Home extends Component {
 
     render() {
         const { 
-            showLoadingWidget,
-
             showProfileWidget, 
             profileWidgetAnimation,
             expandProfileWidget,
@@ -202,13 +194,6 @@ class Home extends Component {
 
         return (
             <div id="home-container">
-
-                {/* {showLoadingWidget &&
-                    <Paper elevation={3} className={`loading-widget`}>
-                        <Typography variant="h4">Loading...</Typography>
-                        <Loading start={this.startInitialAnimationSequence}/>
-                    </Paper>
-                } */}
                 
                 {showProfileWidget &&
                     <div className={`top-left-widget ${profileWidgetAnimation}`}>
@@ -251,4 +236,4 @@ class Home extends Component {
 }
 
 
-export default Home;
+export default AboutMe;

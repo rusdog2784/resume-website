@@ -1,8 +1,7 @@
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
-import hoboken from "../assets/img/hoboken.png";
+import hoboken from "Assets/Images/hoboken.png";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import "./styles.css";
 
 
 export default function LocationWidget(props) {

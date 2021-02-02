@@ -1,3 +1,22 @@
+div#home-container {
+    width: 100%;
+    height: 100%;
+}
+
+.top-left-widget, .bottom-widget {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top-right-widget {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
 .widget-root {
     display: flex;
     justify-content: space-between;
@@ -100,7 +119,7 @@
     transform: translate(0, -50%);
 }
 
-.navigate-down {
+.navigate-bottom {
     bottom: 12px;
     left: 50%;
     transform: translate(-50%, 0);
@@ -108,7 +127,7 @@
     height: 20px !important;
 }
 
-.navigate-up {
+.navigate-top {
     top: 12px;
     left: 50%;
     transform: translate(-50%, 0);
@@ -117,7 +136,103 @@
 }
 
 
-/*** ANIMATIONS ***/
+// ========================
+// Animations
+// ========================
+
+.fade-in {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.fade-in-slow {
+    animation: fadeIn 1s ease forwards;
+}
+
+.move-profile-widget {
+    animation: moveProfileWidget 0.75s ease forwards;
+}
+
+.move-location-widget {
+    animation: moveLocationWidget 0.75s ease forwards;
+}
+
+.move-export-resume-widget {
+    animation: moveExportResumeWidget 0.5s ease forwards;
+}
+
+.move-linked-in-widget {
+    animation: moveLinkedInWidget 0.5s ease forwards;
+}
+
+.move-git-hub-widget {
+    animation: moveGitHubWidget 0.5s ease forwards;
+}
+
+.move-contact-me-widget {
+    animation: moveContactMeWidget 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveProfileWidget {
+    100% {
+        top: 12px;
+        left: 12px;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveLocationWidget {
+    100% {
+        top: 12px;
+        right: 12px;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveExportResumeWidget {
+    100% {
+        top: 87%;
+        left: 15%;
+    }
+}
+
+@keyframes moveLinkedInWidget {
+    100% {
+        top: 87%;
+        left: 35%;
+    }
+}
+
+@keyframes moveGitHubWidget {
+    100% {
+        top: 87%;
+        left: 65%;
+    }
+}
+
+@keyframes moveContactMeWidget {
+    100% {
+        top: 87%;
+        left: 85%;
+    }
+}
 
 @keyframes showText {
     0% {

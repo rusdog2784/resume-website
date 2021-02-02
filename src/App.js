@@ -1,13 +1,17 @@
 import React, { Component } from "react";
-import Home from "./Home";
-import Grid from "./testing_stuff/Grid";
+import HUD from "Components/HUD/HUD";
+
+// Stylesheet Imports
+import "Assets/CSS/index.scss";
+import "Assets/CSS/HUD.scss";
+import "Assets/CSS/AboutMe.scss";
 
 
 class App extends Component {
     render() {
         return (
             <div id="app-container">
-                <Grid />
+                <HUD />
             </div>
         )
     }

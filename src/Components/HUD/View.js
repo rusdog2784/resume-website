@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Home from "../Home";
-import NavigationArrows, { NavigationDirection } from "../home/NavigationArrows";
+import AboutMe from "Components/AboutMe/AboutMe";
+import NavigationArrows, { NavigationDirection } from "Components/HUD/NavigationArrows";
 
 
 class View extends Component {
@@ -34,22 +34,51 @@ class View extends Component {
     }
 
     getViewComponent() {
-        if (this.props.view.title === "Home") {
-            return <Home />
+        if (this.props.view.title === "About Me") {
+            return <AboutMe />
         }
     }
 
     getArrowsToShow() {
-        if (this.props.view.title === "Home") {
-            return [NavigationDirection.left, NavigationDirection.right, NavigationDirection.bottom];
+        let arrowsToShow = [{}];
+        if (this.props.view.title === "About Me") {
+            arrowsToShow = [
+                {
+                    title: "Hobbies / Interests",
+                    direction: NavigationDirection.left
+                },
+                {
+                    title: "Work Experience",
+                    direction: NavigationDirection.right
+                },
+                {
+                    title: "Skills",
+                    direction: NavigationDirection.bottom
+                }
+            ]
         } else if (this.props.view.title === "Work Experience") {
-            return [NavigationDirection.left];
+            arrowsToShow = [
+                {
+                    title: "About Me",
+                    direction: NavigationDirection.left
+                }
+            ]
         } else if (this.props.view.title === "Hobbies") {
-            return [NavigationDirection.right];
+            arrowsToShow = [
+                {
+                    title: "About Me",
+                    direction: NavigationDirection.right
+                }
+            ]
         } else if (this.props.view.title === "Skills") {
-            return [NavigationDirection.top];
+            arrowsToShow = [
+                {
+                    title: "About Me",
+                    direction: NavigationDirection.top
+                }
+            ]
         }
-        return [];
+        return arrowsToShow;
     }
 
     render() {

@@ -1,7 +1,6 @@
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
-import profile_pic from "../assets/img/profile-pic.jpg";
-import "./styles.css";
+import profile_pic from "Assets/Images/profile-pic.jpg";
 
 
 export default function ProfileWidget(props) {
