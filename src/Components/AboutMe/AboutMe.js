@@ -2,10 +2,7 @@ import React, { Component } from "react";
 import ProfileWidget from "Components/AboutMe/ProfileWidget";
 import LocationWidget from "Components/AboutMe/LocationWidget";
 import DescriptionWidget from "Components/AboutMe/DescriptionWidget";
-import ExportResumeWidget from "Components/AboutMe/ExportResumeWidget";
-import LinkedInWidget from "Components/AboutMe/LinkedInWidget";
-import ContactMeWidget from "Components/AboutMe/ContactMeWidget";
-import GitHubWidget from "Components/AboutMe/GitHubWidget";
+import FabWidget, { FabWidgetTitles } from "Components/AboutMe/FabWidget";
 
 
 const animate = true;
@@ -34,7 +31,10 @@ class AboutMe extends Component {
             gitHubWidgetAnimation: "",
 
             showContactMeWidget: false,
-            contactMeWidgetAnimation: ""
+            contactMeWidgetAnimation: "",
+
+            showDescriptionWidget: false,
+            descriptionWidgetAnimation: ""
         };
     }
 
@@ -61,6 +61,8 @@ class AboutMe extends Component {
             await this.startContactMeWidgetAnimation();
             await wait(1500);
             await this.collapseWidgets();
+            await wait(100);
+            await this.startDescriptionWidgetAnimation();
         } else {
             this.showAllWidgets();
         }
@@ -81,7 +83,9 @@ class AboutMe extends Component {
             showContactMeWidget: true,
             contactMeWidgetAnimation: "move-contact-me-widget",
             showNavigationArrows: true,
-            navigationArrowsAnimation: "fade-in-slow"
+            navigationArrowsAnimation: "fade-in-slow",
+            showDescriptionWidget: true,
+            descriptionWidgetAnimation: "fade-in-slow"
         });
     }
 
@@ -169,6 +173,14 @@ class AboutMe extends Component {
         });
     }
 
+    startDescriptionWidgetAnimation = async() => {
+        await wait(100);
+        this.setState({
+            showDescriptionWidget: true,
+            descriptionWidgetAnimation: "fade-in-slow"
+        });
+    }
+
     render() {
         const { 
             showProfileWidget, 
@@ -189,7 +201,10 @@ class AboutMe extends Component {
             gitHubWidgetAnimation,
 
             showContactMeWidget,
-            contactMeWidgetAnimation
+            contactMeWidgetAnimation,
+
+            showDescriptionWidget,
+            descriptionWidgetAnimation
         } = this.state;
 
         return (
@@ -209,27 +224,34 @@ class AboutMe extends Component {
 
                 {showExportResumeWidget &&
                     <div className={`bottom-widget ${exportResumeWidgetAnimation}`}>
-                        <ExportResumeWidget />
+                        <FabWidget title={FabWidgetTitles.downloadCV} />
                     </div>
                 }
 
                 {showLinkedInWidget &&
                     <div className={`bottom-widget ${linkedInWidgetAnimation}`}>
-                        <LinkedInWidget />
+                        <FabWidget title={FabWidgetTitles.linkedIn} />
                     </div>
                 }
 
                 {showGitHubWidget &&
                     <div className={`bottom-widget ${gitHubWidgetAnimation}`}>
-                        <GitHubWidget />
+                        <FabWidget title={FabWidgetTitles.gitHub} />
                     </div>
                 }
 
                 {showContactMeWidget &&
                     <div className={`bottom-widget ${contactMeWidgetAnimation}`}>
-                        <ContactMeWidget />
+                        <FabWidget title={FabWidgetTitles.contactMe} />
                     </div>
                 }
+
+                {showDescriptionWidget && 
+                    <div className={`middle-widget ${descriptionWidgetAnimation}`}>
+                        <DescriptionWidget />
+                    </div>
+                }
+                
             </div>
         )
     }

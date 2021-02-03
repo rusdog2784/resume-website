@@ -1,9 +1,31 @@
+// =========================================================
+// Global
+// =========================================================
 div#home-container {
     width: 100%;
     height: 100%;
 }
 
-.top-left-widget, .bottom-widget {
+.flex-row-reverse {
+    flex-direction: row-reverse !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.underline {
+    width: 80%;
+    height: 1px;
+    margin: 0 auto;
+    background-color: black;
+}
+
+
+// =========================================================
+// Widgets
+// =========================================================
+.top-left-widget, .bottom-widget, .middle-widget {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,27 +50,14 @@ div#home-container {
     transition: all 0.3s !important;
 }
 
-.flex-row-reverse {
-    flex-direction: row-reverse !important;
-}
-
 .widget-expand, .widget-root:hover {
     width: 400px;
-}
-
-.widget-root:hover > .widget-text, .widget-expand > .widget-text {
-    animation: showText 0.5s ease;
-    animation-fill-mode: forwards;
 }
 
 .widget-image {
     height: 100%;
     width: auto;
     border-radius: 1rem;
-}
-
-.pointer {
-    cursor: pointer;
 }
 
 .widget-text {
@@ -60,6 +69,10 @@ div#home-container {
     visibility: hidden;
 }
 
+
+// =========================================================
+// Buttons
+// =========================================================
 .fab {
     width: 4.5rem !important;
     height: 4.5rem !important;
@@ -73,21 +86,6 @@ div#home-container {
 .fab svg {
     width: 1.5em !important;
     height: 1.5em !important;
-}
-
-.loading-root {
-    width: 80%;
-}
-
-.linear-progress-bar {
-    height: 12px !important;
-    border-radius: 4px;
-    margin-top: 8px;
-    background-color: rgba(139, 0, 0, 0.3) !important;
-}
-
-.linear-progress-bar .MuiLinearProgress-barColorPrimary {
-    background-color: darkred !important;
 }
 
 .navigation-arrows-root {
@@ -136,9 +134,13 @@ div#home-container {
 }
 
 
-// ========================
+// =========================================================
 // Animations
-// ========================
+// =========================================================
+.widget-root:hover > .widget-text, .widget-expand > .widget-text {
+    animation: showText 0.5s ease;
+    animation-fill-mode: forwards;
+}
 
 .fade-in {
     animation: fadeIn 0.3s ease forwards;

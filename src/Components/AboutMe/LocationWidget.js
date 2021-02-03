@@ -4,6 +4,12 @@ import hoboken from "Assets/Images/hoboken.png";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 
+function goToLink(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+}
+
+
 export default function LocationWidget(props) {
     const { expand } = props;
     let animation = "";
@@ -16,12 +22,9 @@ export default function LocationWidget(props) {
 
     return (
         <Paper elevation={3} className={`widget-root flex-row-reverse ${animation}`} >
-            <img src={hoboken} alt="avatar" className={`widget-image pointer`} onClick={() => {
-                var win = window.open(mapsURL, '_blank');
-                win.focus();
-            }} />
+            <img src={hoboken} alt="avatar" className={`widget-image pointer`} onClick={() => {goToLink(mapsURL)}} />
             <div className={`widget-text`}>
-                <Typography variant="h5" gutterBottom>Hoboken, NJ</Typography>
+                <h5>Hoboken, NJ</h5>
                 <LocationOnIcon style={{ fontSize: "36px", width: "100%" }}/>
             </div>
         </Paper>
