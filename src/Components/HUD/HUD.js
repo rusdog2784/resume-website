@@ -14,7 +14,7 @@ class HUD extends Component {
             views: [
                 {
                     index: 0,
-                    title: "Hobbies",
+                    title: "Hobbies and Interests",
                     position: {
                         x: -1,
                         y: 0

@@ -44,7 +44,7 @@ class View extends Component {
         if (this.props.view.title === "About Me") {
             arrowsToShow = [
                 {
-                    title: "Hobbies / Interests",
+                    title: "Hobbies and Interests",
                     direction: NavigationDirection.left
                 },
                 {
@@ -63,7 +63,7 @@ class View extends Component {
                     direction: NavigationDirection.left
                 }
             ]
-        } else if (this.props.view.title === "Hobbies") {
+        } else if (this.props.view.title === "Hobbies and Interests") {
             arrowsToShow = [
                 {
                     title: "About Me",

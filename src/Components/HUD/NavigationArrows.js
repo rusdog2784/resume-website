@@ -47,7 +47,7 @@ class NavigationArrows extends Component {
 
                 {arrowsToShow.map(arrow => {
 
-                    const title = arrow.title;
+                    const tooltipTitle = (<p className={`custom-tooltip-title`}>{arrow.title}</p>);
                     const direction = arrow.direction;
                     const icon = this.getIconForArrowDirection(direction);
                     let placement = direction;
@@ -56,7 +56,7 @@ class NavigationArrows extends Component {
                     else placement = placement.toLowerCase();
 
                     return (
-                        <Tooltip title={title} placement={placement}>
+                        <Tooltip title={tooltipTitle} placement={placement}>
                             <Fab 
                                 className={`navigate-button navigate-${direction.toLowerCase()}`} 
                                 onClick={() => {this.handleArrowClick(direction)}} 

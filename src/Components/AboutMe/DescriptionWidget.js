@@ -8,9 +8,6 @@ const useStyles = makeStyles({
         justifyContent: "center",
         alignItems: "center"
     },
-    paper: {
-        borderRadius: "1rem"
-    },
     text: {
         color: "black",
         margin: "0",
@@ -26,9 +23,9 @@ export default function DescriptionWidget(props) {
 
     return (
         <div className={classes.root}>
-            <Paper elevatation={3} className={classes.paper}>
-                <h5 className={classes.text}>{description}</h5>
-            </Paper>
+            <div className={classes.paper}>
+                <h2 className={classes.text}>{description}</h2>
+            </div>
         </div>
     )
 }
