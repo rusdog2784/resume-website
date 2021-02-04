@@ -19,7 +19,12 @@ const useStyles = makeStyles({
 
 export default function DescriptionWidget(props) {
     const classes = useStyles();
-    const description = '"Sometimes you gotta run before you can walk." - Tony Stark.';
+    const description = (
+        <p className={`description-text`}>
+            "Sometimes you gotta run before you can walk."<br/>
+            - Tony Stark.
+        </p>
+    )
 
     return (
         <div className={classes.root}>
