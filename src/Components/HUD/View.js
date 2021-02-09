@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import AboutMe from "Components/AboutMe/AboutMe";
 import NavigationArrows, { NavigationDirection } from "Components/HUD/NavigationArrows";
+import AboutMe from "Components/AboutMe/AboutMe";
+import WorkExperience from "Components/WorkExperience/WorkExperience";
+import Hobbies from "Components/Hobbies/Hobbies";
+import Skills from "Components/Skills/Skills";
 
 
 class View extends Component {
@@ -36,6 +39,12 @@ class View extends Component {
     getViewComponent() {
         if (this.props.view.title === "About Me") {
             return <AboutMe />
+        } else if (this.props.view.title === "Work Experience") {
+            return <WorkExperience />
+        } else if (this.props.view.title === "Hobbies and Interests") {
+            return <Hobbies />
+        } else if (this.props.view.title === "Skills") {
+            return <Skills />
         }
     }
 

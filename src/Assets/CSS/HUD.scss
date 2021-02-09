@@ -1,7 +1,6 @@
-// ****************
+// ===========================
 // Constants
-// ****************
-
+// ===========================
 :root {
     --views-width: 90vw;
     --views-height: 90vh;
@@ -14,10 +13,9 @@
 } 
 
 
-// ****************
+// ===========================
 // Global
-// ****************
-
+// ===========================
 .glass-effect {
     background: linear-gradient(
         to right bottom, 
@@ -37,10 +35,9 @@
 }
 
 
-// ****************
+// ===========================
 // Grid
-// ****************
-
+// ===========================
 .grid-root {
     position: relative;
 
@@ -72,10 +69,59 @@
 }
 
 
-// ****************
-// Views
-// ****************
+// ===========================
+// Navigation
+// ===========================
+.navigation-arrows-root {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
+.navigate-button {
+    position: absolute !important;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 4px !important;
+    width: 36px !important;
+    background-color: white !important;
+}
+
+.navigate-button:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.navigate-left {
+    top: 50%;
+    left: 12px;
+    transform: translate(0, -50%);
+}
+
+.navigate-right {
+    top: 50%;
+    right: 12px;
+    transform: translate(0, -50%);
+}
+
+.navigate-bottom {
+    bottom: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 56px !important;
+    height: 20px !important;
+}
+
+.navigate-top {
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 56px !important;
+    height: 20px !important;
+}
+
+
+// ===========================
+// Views
+// ===========================
 .view {
     width: var(--views-width);
     height: var(--views-height);
@@ -128,11 +174,21 @@
     animation-delay: calc(var(--base-duration) / 6);
 }
 
+.view-title {
+    position: absolute;
+    top: 16px;
+    text-align: center;
+}
 
-// ****************
+.hobbies-root, .work-experience-root, .skills-root {
+    display: flex;
+    justify-content: center;
+}
+
+
+// ===========================
 // Animations
-// **************** 
-
+// ===========================
 @keyframes view-out-left {
     0% {
         transform: scale(1);
