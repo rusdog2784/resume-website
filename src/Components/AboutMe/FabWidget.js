@@ -64,7 +64,7 @@ class FabWidget extends Component {
     }
 
     openContactMeModal() {
-        alert("Contact Me Modal Coming Soon!");
+        alert("'Contact Me' modal coming soon. Just need to find the right styled component.");
     }
 
     render() {
