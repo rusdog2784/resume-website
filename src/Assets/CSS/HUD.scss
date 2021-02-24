@@ -8,7 +8,7 @@
     --horizontal-flex-multiplier: 3;
     --vertical-flex-multiplier: 2.05;
 
-    --base-duration: 700ms;
+    --base-duration: 600ms;
     --base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
 } 
 
@@ -176,7 +176,7 @@
 
 .view-title {
     position: absolute;
-    top: 16px;
+    bottom: 16px;
     text-align: center;
 }
 
