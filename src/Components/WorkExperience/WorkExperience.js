@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ExperienceTimeline from "Components/WorkExperience/ExperienceTimeline";
 import under_construction from "Assets/Images/under_construction.png";
 
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline
@@ -9,7 +10,8 @@ class WorkExperience extends Component {
         return (
             <div className={`work-experience-root`}>
                 <h1 className={`view-title`}>Work Experience</h1>
-                <img className={`under-construction-image`} src={under_construction} />
+                {/* <img className={`under-construction-image`} src={under_construction} /> */}
+                <ExperienceTimeline />
             </div>
         )
     }

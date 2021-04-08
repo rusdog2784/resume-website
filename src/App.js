@@ -4,6 +4,7 @@ import HUD from "Components/HUD/HUD";
 import "Assets/CSS/index.scss";
 import "Assets/CSS/HUD.scss";
 import "Assets/CSS/AboutMe.scss";
+import "Assets/CSS/WorkExperience.scss";
 
 
 class App extends Component {

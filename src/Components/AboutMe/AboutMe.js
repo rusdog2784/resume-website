@@ -61,7 +61,7 @@ class AboutMe extends Component {
             await this.startContactMeWidgetAnimation();
             await wait(1500);
             await this.collapseWidgets();
-            await wait(100);
+            await wait(500);
             await this.startDescriptionWidgetAnimation();
         } else {
             this.showAllWidgets();

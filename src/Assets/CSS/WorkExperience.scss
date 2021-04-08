@@ -1,0 +1,19 @@
+.experience-timeline-root {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    top: 36px;
+    bottom: 74px;
+    overflow: auto;
+}
+
+.timeline-object {
+    height: 100%;
+}
+
+.timeline-item-paper {
+    padding: 6px 16px;
+    width: 100%;
+    border-radius: 8px !important;
+}
