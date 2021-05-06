@@ -17,6 +17,7 @@ const styles = {
         paddingRight: "2%",
         width: "100%",
         height: "100%",
+        overflow: "auto",
         background: "linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3))"
     },
     profileWrapper: {
@@ -49,6 +50,10 @@ const styles = {
 
 
 class MobileMain extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         const { classes } = this.props;
         return (
