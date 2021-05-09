@@ -49,7 +49,6 @@ export default function InteractionIcons(props) {
                     aria-label={"LinkedIn"} 
                     className={classes.fabButton} 
                     onClick={() => { goToLink(linkedInURL); }}
-                    disableRipple 
                 >
                     <LinkedInIcon />
                 </Fab>
@@ -59,8 +58,7 @@ export default function InteractionIcons(props) {
                 <Fab 
                     aria-label={"GitHub"} 
                     className={classes.fabButton} 
-                    onClick={() => { goToLink(gitHubURL); }}
-                    disableRipple 
+                    onClick={() => { goToLink(gitHubURL); }} 
                 >
                     <GitHubIcon />
                 </Fab>
@@ -70,8 +68,7 @@ export default function InteractionIcons(props) {
                 <Fab 
                     aria-label={"Download CV"} 
                     className={classes.fabButton} 
-                    onClick={() => { alert("Download CV Coming Soon!"); }}
-                    disableRipple 
+                    onClick={() => { alert("Download CV Coming Soon!"); }} 
                 >
                     <GetAppIcon />
                 </Fab>
@@ -81,8 +78,7 @@ export default function InteractionIcons(props) {
                 <Fab 
                     aria-label={"Contact Me"} 
                     className={classes.fabButton} 
-                    onClick={() => { alert("Contact Me Coming Soon!"); }}
-                    disableRipple 
+                    onClick={() => { alert("Contact Me Coming Soon!"); }} 
                 >
                     <ModeCommentIcon />
                 </Fab>

@@ -1,5 +1,6 @@
 import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import MyStoryModal from "Components/Mobile/MyStoryModal";
 
 
 const useStyles = makeStyles({
@@ -27,14 +28,6 @@ const useStyles = makeStyles({
         justifyContent: "flex-start",
         alignItems: "center",
         paddingBottom: "8px"
-    },
-    button: {
-        backgroundColor: "black",
-        color: "white",
-        fontSize: "0.75rem",
-        "&:focus": {
-            backgroundColor: "rgb(55, 55, 55)"
-        }
     }
 });
 
@@ -51,11 +44,7 @@ export default function HookStatement(props) {
             <h1 className={classes.myTitle} >{myTitle}</h1>
             <div className={classes.line} ></div>
             <p className={classes.myStatement} >{myStatement}</p>
-            <div className={classes.buttonWrapper} >
-                <Button variant="contained" className={classes.button} disableRipple >
-                    My Story
-                </Button>
-            </div>
+            <MyStoryModal />
         </div>
     )
 }
