@@ -33,13 +33,13 @@ export default function NavigationButtons(props) {
     
     return (
         <div className={classes.root}>
-            <Button variant="contained" className={classes.buttonWrapper} disableRipple >
+            <Button variant="contained" className={classes.buttonWrapper} >
                 <div className={classes.buttonTitle}>Skills</div>
             </Button>
-            <Button variant="contained" className={classes.buttonWrapper} disableRipple >
+            <Button variant="contained" className={classes.buttonWrapper} >
                 <div className={classes.buttonTitle}>Work Experience</div>
             </Button>
-            <Button variant="contained" className={classes.buttonWrapper} disableRipple >
+            <Button variant="contained" className={classes.buttonWrapper} >
                 <div className={classes.buttonTitle}>Hobbies & Interests</div>
             </Button>
         </div>
