@@ -15,6 +15,7 @@ const useStyles = makeStyles({
         alignItems: "flex-start"
     },
     fabWrapper: {
+        flex: 1,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

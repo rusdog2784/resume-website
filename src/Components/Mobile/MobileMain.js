@@ -38,13 +38,14 @@ const styles = {
         flex: 2,
         width: "90%",
         display: "flex",
-        alignItems: "center"
+        alignItems: "flex-start"
     },
     navigationButtonsWrapper: {
         flex: 1,
         width: "90%",
         display: "flex",
         justifyContent: "center",
+        alignItems: "flex-start"
     },
 };
 
