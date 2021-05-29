@@ -3,6 +3,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import ThingeeIcon from "Assets/Images/ThingeeIcon.png";
 import WorkIcon from '@material-ui/icons/Work';
 import { makeStyles } from '@material-ui/core';
+import Paper from "@material-ui/core/Paper";
 
 
 const workExperience = [
@@ -129,12 +130,23 @@ const useStyles = makeStyles((theme) => ({
     },
     date: {
         color: "black"
-    },
-    content: {
-        color: "rgba(255, 255, 255, 0.3)",
-        background: "rgb(33, 150, 243)"
     }
 }));
+const timelineStyles = {
+    contentStyle: {
+        color: 'black',
+        background: 'rgba(255, 255, 255)',
+        boxShadow: "0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%)"
+    },
+    contentArrowStyle: {
+        borderRight: '7px solid rgba(255, 255, 255, 0.8)'
+    },
+    iconStyle: {
+        color: 'black',
+        background: 'rgba(255, 255, 255, 0.8)',
+        boxShadow: "0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%)"
+    }
+}
 
 
 function onClickFunction(event) {
@@ -149,34 +161,34 @@ export default function CustomTimeline(props) {
         <VerticalTimeline>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: 'rgba(0, 0, 0, 0.8)', color: '#fff' }}
-                contentArrowStyle={{ borderRight: '7px solid rgba(0, 0, 0, 0.8)' }}
+                contentStyle={timelineStyles.contentStyle}
+                contentArrowStyle={timelineStyles.contentArrowStyle}
                 date="Jan 2015 - May 2015"
                 dateClassName={classes.date}
-                iconStyle={{ background: 'rgba(0, 0, 0, 0.8)', color: '#fff' }}
+                iconStyle={timelineStyles.iconStyle}
                 icon={<WorkIcon />}
                 onTimelineElementClick={ () => onClickFunction(1) }
             >
                 <h3 className="vertical-timeline-element-title">iOS Developer Intern</h3>
                 <h4 className="vertical-timeline-element-subtitle">Thingee Corporation</h4>
                 <p>
-                Mainly worked on proof of concepts for their main iOS iPad application.
+                    Worked on proof of concepts for their main iOS iPad application.
                 </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: 'rgba(0, 0, 0, 0.8)', color: '#fff' }}
-                contentArrowStyle={{ borderRight: '7px solid rgba(0, 0, 0, 0.8)' }}
+                contentStyle={timelineStyles.contentStyle}
+                contentArrowStyle={timelineStyles.contentArrowStyle}
                 date="Aug 2015 - Dec 2015"
                 dateClassName={classes.date}
-                iconStyle={{ background: 'rgba(0, 0, 0, 0.8)', color: '#fff' }}
+                iconStyle={timelineStyles.iconStyle}
                 icon={<WorkIcon />}
                 onTimelineElementClick={ () => onClickFunction(2) }
             >
                 <h3 className="vertical-timeline-element-title">Systems Engineering Intern</h3>
                 <h4 className="vertical-timeline-element-subtitle">TalkPoint a PGI Company</h4>
                 <p>
-                Initial introduction into the power of Python.
+                    Initial introduction into the power of Python.
                 </p>
             </VerticalTimelineElement>
         </VerticalTimeline>
