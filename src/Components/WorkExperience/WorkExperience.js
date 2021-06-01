@@ -10,15 +10,14 @@ const styles = {
     root: {
         position: "absolute",
         top: "0px",
-        left: "0px",
+        left: "50px",
+        right: "50px",
         height: "100%",
-        width: "100%",
         display: "flex",
-        justifyContent: "center",
-        zIndex: "-1"
+        justifyContent: "center"
     },
     customTimelineWrapper: {
-        width: "90%",
+        width: "100%",
         paddingTop: "24px",
         paddingLeft: "32px",
         paddingBottom: "84px"
