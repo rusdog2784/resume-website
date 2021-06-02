@@ -8,7 +8,11 @@ export const workExperience = [
         timeFrame: "TBD",
         bullets: {
             during: [
-                ``
+                `Pivoted to working on micro-services capable of interacting with Active Directory 
+                    and our company’s NAS infrastructure to provide utility functionality for our 
+                    team’s other applications. Sadly, had to switch from pushing to the cloud to 
+                    deploying on internal virtual machines, which turned out to be a great learning 
+                    experience.`
             ],
             after: [
                 ``
@@ -24,10 +28,21 @@ export const workExperience = [
         timeFrame: "2 years 6 months",
         bullets: {
             during: [
-                ``
+                `Built an MVP for an application capable of loading in daily reports, 
+                    performing ETL functions, then displaying relevant information back 
+                    to an internal, international team via a React frontend.`,
+                `Learned about the basics of Agile and SRE methodologies and best practices.`,
+                `Took lead on the development of an automated solution to home drive 
+                    migrations, which are done for the entire company, using Python, React, 
+                    Internal Cloud, and CI/CD. Was the team’s scrum master, project owner, 
+                    DevOps engineer, and application developer.`
             ],
             after: [
-                ``
+                `Gained an appreciation for DevOps, automation, and application security.`,
+                `Signed up on TryHackMe.com to learn more about cybersecurity. Currently at 
+                    level 9 and have completed 28 rooms (easy and medium) each with their 
+                    own write-up (on my GitHub).`,
+                `Taught me the basics of Docker, Kubernetes, and AWS EC2.`
             ]
         }
     },
@@ -56,10 +71,12 @@ export const workExperience = [
         timeFrame: "5 months",
         bullets: {
             during: [
-                ``
+                `Utilized my unique attitude and skills to complete projects ranging from 
+                    customer support and insights to development and software integrations.`
             ],
             after: [
-                ``
+                `Continued to work part-time during the school year assisting where needed 
+                    and filling in the gaps.`
             ]
         }
     },
@@ -72,10 +89,21 @@ export const workExperience = [
         timeFrame: "4 months",
         bullets: {
             during: [
-                ``
+                `Produced written, audio, and video tutorials and documentation for 
+                    product features.`,
+                `Completed development on a new Customer Service Zendesk portal using 
+                    HTML, CSS, Javascript, and JQuery. I had to collaborate with our 
+                    designers and customer success teams to ensure an overall better 
+                    experience for our customers.`,
+                `Trusted to interact directly with customers in order to understand and 
+                    assist with their needs.`
             ],
             after: [
-                ``
+                `Discovered the importance of writing quality documentation, which I 
+                    practice almost every day as a software developer.`,
+                `Gained exposure to working on a multi-disciplinary project (customer 
+                    service, designers, and developers), iterative development, and 
+                    empathizing with customers.`
             ]
         }
     },
@@ -88,10 +116,15 @@ export const workExperience = [
         timeFrame: "5 months",
         bullets: {
             during: [
-                ``
+                `Increased productivity and limited toil for the Engineering team by 
+                    writing Python scripts to automate tasks and workflows.`,
+                `Received exposure to assembling, installing, configuring, and maintaining 
+                    system environments (Linux, Windows Server, Windows 7, 8, and 10).`
             ],
             after: [
-                ``
+                `Continued to expand my knowledge of Python by creating personal automation 
+                    scripts involving web-scraping and general task automation.`,
+                `Utilized the hands-on experience to build my own personal computer.`
             ]
         }
     },
@@ -104,12 +137,11 @@ export const workExperience = [
         timeFrame: "5 months",
         bullets: {
             during: [
-                `Developed and integrated iOS proof of concepts 
-                into the main product using Objective C.`
+                `Developed and integrated iOS proof of concepts into the main product 
+                    using Objective C.`
             ],
             after: [
-                `Designed and developed my own iOS application 
-                using Swift.`
+                `Designed and developed my own iOS application using Swift.`
             ]
         }
     }

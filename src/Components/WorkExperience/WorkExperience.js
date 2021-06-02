@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import ExperienceTimeline from "Components/WorkExperience/ExperienceTimeline";
-import under_construction from "Assets/Images/under_construction.png";
-import CustomTimeline from "Components/WorkExperience/CustomTimeline";
+import JobsTimeline from "Components/WorkExperience/JobsTimeline";
 
 
 const styles = {
@@ -33,11 +31,8 @@ class WorkExperience extends Component {
         return (
             <div className={classes.root}>
                 <h1 className={`view-title`}>Work Experience</h1>
-                {/* <img className={`under-construction-image`} src={under_construction} /> */}
-                {/* <ExperienceTimeline /> */}
-
                 <div className={classes.customTimelineWrapper}>
-                    <CustomTimeline />
+                    <JobsTimeline />
                 </div>
             </div>
         )
