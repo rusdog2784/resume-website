@@ -82,7 +82,7 @@ class MobileMain extends Component {
 
         return (
             <div className="grid-root">
-                <div className="views-wrapper" style={wrapperTransform}>
+                {/* <div className="views-wrapper" style={wrapperTransform}> */}
                     <div className={classes.root}>
                         <div className={classes.profileWrapper}>
                             <Profile />
@@ -97,7 +97,7 @@ class MobileMain extends Component {
                             <NavigationButtons />
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         )
     }
