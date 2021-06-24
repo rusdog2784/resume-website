@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import MyStoryModal from "Components/Mobile/MyStoryModal";
+import MyStoryModal from "components/mobile/MyStoryModal";
 
 
 const useStyles = makeStyles({

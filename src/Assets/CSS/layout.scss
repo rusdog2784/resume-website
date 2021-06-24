@@ -1,0 +1,54 @@
+:root {
+    --views-width: 90vw;
+    --views-height: 90vh;
+    
+    --horizontal-flex-multiplier: 3;
+    --vertical-flex-multiplier: 2.05;
+
+    --base-duration: 1000ms;
+    --base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+
+div#app-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.resume-sections-wrapper {
+    position: absolute;
+    width: calc(var(--views-width) * var(--horizontal-flex-multiplier));
+    height: calc(var(--views-height) * var(--vertical-flex-multiplier));
+    margin-top: 24px;
+    top: 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
+
+    transition: transform var(--base-duration) cubic-bezier(0.25, 1, 0.35, 1);
+    transition-delay: calc(var(--base-duration) / 4);
+}
+
+.resume-section-container {
+    width: var(--views-width);
+    height: var(--views-height);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
+    
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Profile from "components/mobile/Profile";
+import Profile from 'components/mobile/Profile';
 import InteractionIcons from "components/mobile/InteractionIcons";
 import HookStatement from "components/mobile/HookStatement";
 import NavigationButtons from "components/mobile/NavigationButtons";
@@ -50,7 +50,7 @@ const styles = {
 };
 
 
-class MobileMain extends Component {
+class MainContainerMobile extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -104,9 +104,7 @@ class MobileMain extends Component {
 }
 
 
-MobileMain.propTypes = {
+MainContainerMobile.propTypes = {
     classes: PropTypes.object.isRequired,
 };
-
-
-export default withStyles(styles)(MobileMain);
+export default withStyles(styles)(MainContainerMobile);

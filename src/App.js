@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import HUD from "Components/HUD/HUD";
-import MobileMain from 'Components/Mobile/MobileMain';
+import MainContainer from 'containers/desktop/main';
+import MainContainerMobile from 'containers/mobile/main';
 // Stylesheet Imports
-import "Assets/CSS/index.scss";
-import "Assets/CSS/HUD.scss";
-import "Assets/CSS/AboutMe.scss";
-import "Assets/CSS/WorkExperience.scss";
+import "assets/css/index.scss";
+import "assets/css/layout.scss";
 
 
 class App extends Component {
@@ -13,11 +11,12 @@ class App extends Component {
         let windowWidth = window.innerWidth;
         return (
             <div id="app-container">
-                {windowWidth > 768 ? 
-                    <HUD />
+                {/* {windowWidth > 768 ? 
+                    <MainContainer />
                     :
-                    <MobileMain />
-                }
+                    <MainContainerMobile />
+                } */}
+                <MainContainer />
             </div>
         )
     }

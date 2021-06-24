@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import NavigationArrows, { NavigationDirection } from "Components/HUD/NavigationArrows";
-import AboutMe from "Components/AboutMe/AboutMe";
-import WorkExperience from "Components/WorkExperience/WorkExperience";
-import Hobbies from "Components/Hobbies/Hobbies";
-import Skills from "Components/Skills/Skills";
+import NavigationArrows, { NavigationDirection } from "components/HUD/NavigationArrows";
+import AboutMe from "components/aboutMe/AboutMe";
+import WorkExperience from "components/WorkExperience/WorkExperience";
+import Hobbies from "components/Hobbies/Hobbies";
+import Skills from "components/Skills/Skills";
 
 
 class View extends Component {

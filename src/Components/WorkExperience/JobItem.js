@@ -2,7 +2,7 @@ import React from "react";
 import { VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import Modal from '@material-ui/core/Modal';
 import WorkIcon from '@material-ui/icons/Work';
-import JobModal from "Components/WorkExperience/JobModal";
+import JobModal from "components/WorkExperience/JobModal";
 import Backdrop from '@material-ui/core/Backdrop';
 
 

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import ProfileWidget from "Components/AboutMe/ProfileWidget";
-import LocationWidget from "Components/AboutMe/LocationWidget";
-import DescriptionWidget from "Components/AboutMe/DescriptionWidget";
-import FabWidget, { FabWidgetTitles } from "Components/AboutMe/FabWidget";
+import ProfileWidget from "components/aboutMe/ProfileWidgetOld";
+import LocationWidget from "components/aboutMe/LocationWidget";
+import DescriptionWidget from "components/aboutMe/DescriptionWidget";
+import FabWidget, { FabWidgetTitles } from "components/aboutMe/FabWidget";
 
 
 const animate = true;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import JobsTimeline from "Components/WorkExperience/JobsTimeline";
+import JobsTimeline from "components/WorkExperience/JobsTimeline";
 
 
 const styles = {

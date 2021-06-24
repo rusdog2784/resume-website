@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import View from "Components/HUD/View";
+import View from "components/HUD/View";
 
 
 class HUD extends Component {

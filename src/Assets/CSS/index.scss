@@ -39,19 +39,11 @@ h6 {
 
 div#root {
     height: 100%;
-    background: url("../Images/background2.jpg") no-repeat center center fixed;
+    background: url("../images/background2.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-div#app-container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
 }
 
 .under-construction-image {

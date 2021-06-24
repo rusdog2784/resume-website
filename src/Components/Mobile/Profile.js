@@ -1,5 +1,5 @@
 import Paper from "@material-ui/core/Paper";
-import profile_pic from "Assets/Images/profile-pic.jpg";
+import profile_pic from "assets/images/profile-pic.jpg";
 import { makeStyles } from '@material-ui/core/styles';
 
 

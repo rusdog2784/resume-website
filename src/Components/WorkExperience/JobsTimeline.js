@@ -1,8 +1,8 @@
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { makeStyles } from "@material-ui/core/styles";
-import { workExperience } from "Data/workExperienceData";
-import JobItem from "Components/WorkExperience/JobItem";
+import { workExperience } from "data/workExperienceData";
+import JobItem from "components/WorkExperience/JobItem";
 
 
 const useStyles = makeStyles({
